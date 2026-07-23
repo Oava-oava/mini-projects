@@ -7,7 +7,52 @@
     <title>quiz-app</title>
   </head>
   <body>
-    <button class="button">Click me!</button>
+    <div class="quiz">
+      <div class="screen active screen-start" id="screen-start">
+        <h2 class="screen__title">Quiz Time!</h2>
+        <p class="screen__text">Test your knowledge with these fun questions</p>
+        <button class="start-button" id="start-button">Start Quiz</button>
+      </div>
+
+      <div class="screen screen-quiz" id="screen-quiz">
+        <!-- TODO: WE SHOW QUESTION WITH JAVASCRIPT -->
+        <h2 class="quiz-text" id="quiz-question"></h2>
+
+        <div class="quiz-info">
+          <p class="quiz-number">
+            Question: <span id="current-question-index">0</span> of
+            <span id="total-questions">0</span>
+          </p>
+          <p class="score-number">Score: <span id="score">0</span></p>
+        </div>
+
+        <div class="answer__container" id="answers-container">
+          <!--TODO: WE INSERT THESE BUTTONS FROM JAVASCRIPT -->
+          <!-- <button class="answer-btn correct">Question 1</button>
+          <button class="answer-btn">Question 2</button>
+          <button class="answer-btn incorrect">Question 3</button>
+          <button class="answer-btn">Question 4</button> -->
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+
+      <div class="screen screen-result" id="screen-result">
+        <h2 class="screen__title">Quiz Result</h2>
+        <div class="result__info">
+          <p class="result__text" id="result-info">
+            You scored <span id="final-score">n</span> out of
+            <span id="result-score">n</span>
+          </p>
+          <!--TODOS: WE SHOW FEEDBACK WITH JAVASCRIPT-->
+          <h2 class="result__title" id="result-message">Advice goes here</h2>
+        </div>
+        <button class="restart-button" id="restart-button">Restart Quiz</button>
+      </div>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

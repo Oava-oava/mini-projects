@@ -1,18 +1,23 @@
 *,
-*::before,
-*::after {
-  box-sizing: inherit;
+::before,
+::after {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
 }
 
 html {
   box-sizing: border-box;
+  // * MAKING FONT SIZE 1rem = 10px;
+  font-size: 62.5%;
 }
 
 body {
-  font-family: var(--font-body);
-  font-size: var(--font-size-base);
-  color: var(--color-text);
-  background-color: var(--color-bg);
+  font-family: var(--font-primary);
+  background-color: var(--color-background);
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
